@@ -1,0 +1,35 @@
+package com.br.relacao.de.tabelas.controllers;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.br.relacao.de.tabelas.models.Login;
+import com.br.relacao.de.tabelas.models.Usuario;
+import com.br.relacao.de.tabelas.services.UsuarioService;
+
+@Controller
+public class UsuarioController {
+
+	@Autowired
+	private UsuarioService usuarioService;
+
+	@GetMapping("/")
+	public ModelAndView exibirUsuarios() {
+		ModelAndView modelAndView = new ModelAndView("usuario.html");
+		modelAndView.addObject("usuarios", usuarioService.pegarTodosUsuarios());
+		return modelAndView;
+	}
+
+	@PostMapping("/")
+	public ModelAndView salvarUsuario(@Valid Usuario user, Login log, BindingResult bindingResult) {
+		ModelAndView modelAndView = new ModelAndView("usuarios.html");
+
+		return modelAndView;
+	}
+}

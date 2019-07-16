@@ -1,0 +1,37 @@
+package com.br.relacao.de.tabelas.models;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Login implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	
+	private String apelido;
+	private String senha;
+	
+	private Usuario usuario;
+
+	public Login() {
+		
+	}
+
+	public Login(Integer id, String apelido, String senha, Usuario usuario) {
+		
+		this.id = id;
+		this.apelido = apelido;
+		this.senha = senha;
+		this.usuario = usuario;
+	}
+	
+	
+
+}

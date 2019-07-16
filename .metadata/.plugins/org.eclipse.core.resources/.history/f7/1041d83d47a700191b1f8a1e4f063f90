@@ -1,0 +1,18 @@
+package com.br.relacao.de.tabelas.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.br.relacao.de.tabelas.models.Login;
+import com.br.relacao.de.tabelas.models.Usuario;
+import com.br.relacao.de.tabelas.repositories.LoginRepository;
+
+
+
+@Service
+public class LoginService {
+
+	@Autowired
+	private LoginRepository loginRepository;
+	
+}

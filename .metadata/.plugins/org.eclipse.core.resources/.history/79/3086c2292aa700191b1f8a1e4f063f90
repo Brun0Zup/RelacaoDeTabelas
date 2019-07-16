@@ -1,0 +1,5 @@
+package com.br.relacao.de.tabelas.models;
+
+public class Usuario {
+
+}

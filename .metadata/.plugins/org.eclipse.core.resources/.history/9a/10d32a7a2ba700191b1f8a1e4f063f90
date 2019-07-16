@@ -1,0 +1,8 @@
+package com.br.relacao.de.tabelas.models;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Login {
+
+}

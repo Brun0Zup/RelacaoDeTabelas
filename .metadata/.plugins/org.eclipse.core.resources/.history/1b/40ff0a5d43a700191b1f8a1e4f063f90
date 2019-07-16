@@ -1,0 +1,24 @@
+package com.br.relacao.de.tabelas.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.br.relacao.de.tabelas.models.Usuario;
+import com.br.relacao.de.tabelas.repositories.UsuarioRepository;
+
+@Service
+public class UsuarioService {
+
+	@Autowired
+	private UsuarioRepository usuarioRepository;
+
+	
+	public void  salvarUsuario(Usuario usuario){
+		 usuarioRepository.save(usuario);
+	}
+	
+	public Iterable<Usuario> pegarTodosUsuarios(){
+		return usuarioRepository.findAll();
+	}
+}
+

@@ -1,0 +1,17 @@
+package com.br.relacao.de.tabelas.models;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Usuario implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
+	private Integer id;
+	private String nome;
+	private String sobrenome;
+	private String email;
+
+	
+}
